@@ -1,0 +1,10 @@
+$text-color: #252c30;
+$bg-color: #252c30;
+$accent-color: #ffc000;
+
+@mixin p-bold {
+	font-family: 'Proxima Nova Bold';
+}
+@mixin p-regular {
+	font-family: 'Proxima Nova Regular';
+}
