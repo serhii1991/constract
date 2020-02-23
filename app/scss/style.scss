@@ -78,7 +78,184 @@
 			}
 		}
 	}
+	&__banner {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&__slider {
+		&-item {
+			padding: 200px 0 225px;
+			color: #fff;
+			text-align: center;
+		}
+		&-title {
+			max-width: 730px;
+			@include p-bold;
+			font-size: 72px;
+			line-height: 90px;
+			margin: 0 auto;
+			margin-bottom: 30px;
+			span {
+				color: $accent-color;
+			}
+		}
+		&-subtitle {
+			max-width: 630px;
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+	}
 }
+
+/*==================================================================================================
+=========================================     welcome     ==========================================
+==================================================================================================*/
+
+.welcome {
+	padding: 140px 0 120px;
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__item {
+		max-width: 255px;
+		width: 100%;
+		border: solid 1px $bg-color;
+		height: 380px;
+		text-align: center;
+		padding: 60px 20px 20px;
+		background-color: $bg-color;
+		color: #fff;
+		cursor: pointer;
+		transition: all .5s ease;
+		&:hover {
+			border: solid 1px $accent-color;
+			background-color: #fff;
+			color: $text-color;
+			.welcome {
+				&__item {
+					&-img {
+						background-color: $accent-color;
+						svg{
+							path {
+								fill: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-img {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+			background-color: #fff;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 35px;
+			svg {
+				path {
+					width: 50px;
+					height: 50px;
+					fill: $accent-color;
+				}
+			}
+		}
+		&-title {
+			@include p-bold;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+/*==================================================================================================
+========================================     services     ==========================================
+==================================================================================================*/
+
+.services {
+	padding: 0 0 80px;
+	&__inner {
+		display: flex;
+	}
+	&__image {
+		min-height: 528px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 50%;
+	}
+	&__items {
+		width: 50%;
+		padding: 45px 0 0 60px;
+		&-title {
+			font-size: 36px;
+			color: $bg-color;
+			@include p-bold;
+			margin-bottom: 45px;
+		}
+	}
+	&__item {
+		max-width: 510px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+		&-image {
+			min-width: 80px;
+			min-height: 80px;
+			background-color: $bg-color;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 35px;
+		}
+		&-content {
+			max-width: 390px;
+			width: 100%;
+		}
+		&-title {
+			text-transform: uppercase;
+			font-size: 18px;
+			@include p-bold;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+/*==================================================================================================
+========================================     happynes     ==========================================
+==================================================================================================*/
+
+.happynes {
+	padding: 70px 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+	}
+	&__item {
+		max-width: 230px;
+		width: 100%;
+		color: #fff;
+		text-align: center;
+		@include p-bold;
+		&-name {
+			font-size: 26px;
+			margin-bottom: 25px;
+		}
+		&-number {
+			font-size: 46px;
+		}
+	}
+}
+
 
 
 

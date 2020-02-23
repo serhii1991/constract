@@ -61,3 +61,91 @@ li {
 	max-width: 1920px;
 	margin: 0 auto;
 }
+
+.button {
+	background-color: $accent-color;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	padding: 15px 85px;
+	border-radius: 32px;
+	@include p-bold;
+	transition: all .3s ease;
+	&:hover {
+		background-color: #ffcb2e;
+	}
+}
+
+.slick {
+	&-arrow {
+		position: absolute;
+		top: 0;
+		background-color: transparent;
+		border: none;
+		color: $accent-color;
+		font-size: 55px;
+		top: 50%;
+		z-index: 2;
+		cursor: pointer;
+		outline: none;
+	}
+	&-next {
+		right: 0;
+	}
+	&-dots {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		li {
+			margin: 0 11px;
+			font-size: 0;
+			button {
+				background-color: rgba($accent-color, .5);
+				display: block;
+				width: 30px;
+				height: 5px;
+				border: none;
+			}
+			&.slick-active {
+				button {
+					background-color: $accent-color;
+				}
+			}
+		}
+	}
+}
+
+.title {
+	@include p-bold;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 30px;
+	position: relative;
+	&::before {
+		content: "We offer";
+		position: absolute;
+		@include p-regular;
+		color: $text-color;
+		font-size: 18px;
+		top: -40px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	span {
+		color: $accent-color;
+	}
+}
+
+.subtitle {
+	@include p-regular;
+	color: $text-color;
+	font-size: 18px;
+	max-width: 720px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
