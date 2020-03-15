@@ -334,7 +334,7 @@
 		top: 100%;
 		transition: all .5s ease;
 		&::before {
-			content: "\f06e"; 
+			content: "\f06e";
 			position: absolute;
 			font-family: "icomoon";
 			color: #fff;
@@ -344,6 +344,277 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+}
+
+
+/*==================================================================================================
+==========================================     team     ============================================
+==================================================================================================*/
+
+
+.team {
+  padding: 140px 0 70px;
+  &__inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 350px;
+    padding: 50px 10px;
+    background-color: $bg-color;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    &-image {
+      width: 148px;
+      height: 148px;
+      border: 50%;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 35px;
+    }
+    &-name {
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    &-description {
+      font-size: 14px;
+      color: $accent-color;
+      margin-bottom: 25px;
+    }
+    &-social {
+      width: 225px;
+      margin: 0 auto;
+      &--list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        li {
+          display: block;
+          width: 40px;
+          height: 40px;
+          a {
+            display: block;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: all .3s;
+            &:hover {
+              background-color: $bg-color;
+              &::before {
+                color: #fff;
+              }
+            }
+            &::before {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              color: $bg-color;
+              font-family: "icomoon";
+              transform: translate(-50%, -50%);
+            }
+            &.facebook {
+              &::before {
+                content: "\f09a";
+              }
+            }
+            &.twitter {
+              &::before {
+                content: "\f099";
+              }
+            }
+            &.google {
+              &::before {
+                content: "\f0d5";
+              }
+            }
+            &.linkedin {
+              &::before {
+                content: "\f0e1";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*==================================================================================================
+======================================     testimonials     ========================================
+==================================================================================================*/
+
+
+.testimonials {
+  padding: 140px 0 70px;
+  background-color: #f4f4f4;
+	&__inner {
+		padding: 65px 105px 90px 80px;
+		background-color: #fff;
+		box-shadow: 0px 0px 40px 0px rgba(45, 62, 80, 0.1);
+		border-radius: 20px;
+		max-width: 920px;
+		margin: 0 auto;
+	}
+	&__item {
+		&-user {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+			&--image {
+				width: 144px;
+				height: 144px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			&--name {
+				width: 115px;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: $bg-color;
+				font-size: 18px;
+				line-height: 24px;
+				span {
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 14px;
+				}
+			}
+		}
+		&-content {
+			font-size: 16px;
+			font-style: italic;
+			color: #56616e;
+			padding-left: 25px;
+			margin-bottom: 20px;
+		}
+		&-rate {
+			padding-left: 25px;
+		}
+	}
+}
+
+
+/*==================================================================================================
+==========================================     news     ============================================
+==================================================================================================*/
+
+
+.news {
+	padding: 140px 0 70px;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		width: 305px;
+		&-image {
+			min-height: 250px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-content {
+			padding: 29px;
+			background-color: $accent-color;
+			color: #fff;
+			&--title {
+				@include p-bold;
+				font-size: 18px;
+				line-height: 22px;
+				margin-bottom: 25px;
+			}
+			&--text {
+				margin-bottom: 15px;
+			}
+			&--information {
+				display: flex;
+				justify-content: space-between;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+
+/*==================================================================================================
+=======================================     subcsribe     ==========================================
+==================================================================================================*/
+
+
+.subscribe {
+	padding: 50px 0;
+	&__title {
+		font-size: 24px;
+		@include p-bold;
+		color: #0c0e37;
+		margin-bottom: 55px;
+		text-align: center;
+	}
+	&__email {
+		max-width: 500px;
+		margin: 0 auto;
+		position: relative;
+		input {
+			width: 100%;
+			min-height: 64px;
+			border-radius: 32px;
+			box-shadow: 0px 0px 30px 0px rgba(45, 62, 80, 0.2);
+			background-color: #f0f0f0;
+			border: none;
+			padding: 0 245px 0 30px;
+			outline: none;
+			&::placeholder {
+				color: #0c0e37;
+			}
+		}
+		button {
+			width: 235px;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+			background-color: $accent-color;
+			min-height: 64px;
+			border-radius: 32px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: none;
+			cursor: pointer;
+			&:hover {
+				background-color: #ffcb2e;
+			}
+		}
+	}
+}
+
+
+/*==================================================================================================
+========================================     footer     ============================================
+==================================================================================================*/
+
+
+.footer {
+	padding: 65px 0 115px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 16px;
+	color: rgba(#0c0e37, .7);
 }
 
 
